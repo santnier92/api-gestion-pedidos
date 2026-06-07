@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+    commands:
+      - echo Instalando dependencias...
+      - pip install -r requirements.txt
+  pre_build:
+    commands:
+      - echo Ejecutando pruebas unitarias con PyTest...
+      - pytest test_main.py
+  build:
+    commands:
+      - echo ¡Pruebas superadas con éxito! Preparando artefacto de despliegue...
+artifacts:
+  files:
+    - main.py
+    - requirements.txt
+    - Dockerfile
