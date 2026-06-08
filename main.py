@@ -60,4 +60,4 @@ def actualizar_estado(pedido_id: int, nuevo_estado: str):
             pedido.estado = nuevo_estado
             return {"mensaje": f"Pedido {pedido_id} actualizado a {nuevo_estado}", "pedido": pedido}
             
-    raise HTTPException(status_code=404, detail="Pedido no encontrado.")
+    raise HTTPException(status_code=404, detail="¡¡Pedido no encontrado!!")
